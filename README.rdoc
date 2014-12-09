@@ -29,3 +29,10 @@ Please feel free to use a different markup language if you do not plan to run
 
 #### create todo_item model (-p = pretend)
 rails generate model todo_item todo_list:references content:string -p
+
+#### generate todo_item controller
+rails generate controller todo_items index -p
+
+#### create a features directory for todo_items
+mkdir -p spec/features/todo_items
+touch spec/features/todo_items/index_spec.rb
