@@ -40,3 +40,12 @@ touch spec/features/todo_items/index_spec.rb
 #### to run test with different format
 rspec --format=documentation spec/features/todo_items/index_spec.rb
 
+#### create test for create todo item
+touch spec/features/todo_items/create_spec.rb
+
+rspec --format=documentation spec/features/todo_items/create_spec.rb
+
+#### add flash display div in layout/application.html.erb
+<% flash.each do |type, message| %>
+	<div class="alert flash <%= type %>"><%= message %></div>
+<% end %>
