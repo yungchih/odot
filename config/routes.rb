@@ -1,5 +1,33 @@
+require 'api_constraints'
+
 Odot::Application.routes.draw do
-  # get "todo_items/index"
+  
+  namespace :api, defaults: {format: :json} do
+    # namespace :v1 do
+    #   resources :todo_lists do
+    #     resources :todo_items
+    #   end
+    # end
+    # namespace :v2 do
+    #   resources :todo_lists do
+    #     resources :todo_items
+    #   end
+    # end
+
+    scope module: :v2, constraints: ApiConstraints.new(version: 2) do
+      resources :todo_lists do
+        resources :todo_items
+      end
+    end
+
+    scope module: :v1, constraints: ApiConstraints.new(version: 1, default: :true) do
+      resources :todo_lists do
+        resources :todo_items
+      end
+    end  
+
+  end
+
   resources :todo_lists do
     resources :todo_items
   end

@@ -49,3 +49,10 @@ rspec --format=documentation spec/features/todo_items/create_spec.rb
 <% flash.each do |type, message| %>
 	<div class="alert flash <%= type %>"><%= message %></div>
 <% end %>
+
+#### guard initial
+guard init rspec
+
+#### 
+
+
