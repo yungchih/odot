@@ -18,6 +18,7 @@ end
 group :development, :test do
 	gem 'rspec-rails'
 	gem 'guard-rspec'
+	gem 'faker'
 end
 
 group :test do
