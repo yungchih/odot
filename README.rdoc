@@ -53,6 +53,17 @@ rspec --format=documentation spec/features/todo_items/create_spec.rb
 #### guard initial
 guard init rspec
 
-#### 
+#### initial rspec
+rails g rspec:install
+
+#### reset test database
+rake db:test:prepare
+
+#### run test
+rspec .
+
+### run specific test
+rspec spec/features/todo_lists/create_spec.rb
+
 
 

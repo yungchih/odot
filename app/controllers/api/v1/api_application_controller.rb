@@ -6,7 +6,7 @@ class Api::V1::ApiApplicationController < ApplicationController
 	end
 
 	def say_hi
-		Faker::Lorem.words(5) 
+		FFaker::Lorem.words(5) 
 	end
 
 end

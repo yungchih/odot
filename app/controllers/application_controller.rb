@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def say_hi
-      Faker::Lorem.sentence(20)
+      FFaker::Lorem.sentence(20)
 	end
 
 end
