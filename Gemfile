@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'rest-client'
+# gem 'daemons', '1.1.9'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -24,7 +25,7 @@ end
 group :test do
 	gem 'capybara', '~>2.4.0'
 	gem 'shoulda-matchers', '~>2.7.0'
-	gem 'factory_girl_rails'
+	gem 'factory_girl_rails', '~> 4.0'
 	gem 'database_cleaner'
 end
 

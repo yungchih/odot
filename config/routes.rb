@@ -2,6 +2,7 @@ require 'api_constraints'
 
 Odot::Application.routes.draw do
   
+  resources :contacts
   namespace :api, defaults: {format: :json} do
     # namespace :v1 do
     #   resources :todo_lists do
