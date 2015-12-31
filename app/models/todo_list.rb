@@ -10,7 +10,7 @@ class TodoList < ActiveRecord::Base
 		todo_items.complete.size > 0
 	end
 
-	def has_incomplete_items?
+	def has_incompleted_items?
 		todo_items.incomplete.size > 0
 	end
 

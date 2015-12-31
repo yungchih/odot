@@ -1,16 +1,16 @@
-<h1><%= @todo_list.title %></h1>
+<h2><%= @todo_list.title %></h2>
 
 <table class="todo_items">
 	<thead>
 	<tr>
-		<th width="25%">Completed</th>
+		<th width="25%">Completed?</th>
 		<th width="65%">Content</th>
 		<th width="10%">Functions</th>
 	</tr>
 	</thead>
 	<tbody>
   <% @todo_list.todo_items.each do |todo_item| %>
-	  <tr id="<%= dom_id(todo_item) %>">
+	  <tr class="item" id="<%= dom_id(todo_item) %>">
 	    <td>
 		    <% if todo_item.completed? %>
 		    	<%= todo_item.completed_at %>
@@ -28,6 +28,11 @@
   </tbody>
 </table>
 
+<ul class="todo_items">
+<% @todo_list.todo_items.each do |todo_item| %>
+	<li><%= todo_item.content %></li>
+<% end %>
+</ul>
 <p>
 	<%= link_to "New Todo Item", new_todo_list_todo_item_path %>
 </p>

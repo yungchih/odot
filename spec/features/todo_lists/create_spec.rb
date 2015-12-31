@@ -21,9 +21,9 @@ describe "Creating todo lists" do
 	end
 
 	it "displays an error when the todo list has no title" do
+		create_todo_list title: ""
 		expect(TodoList.count).to eq(0)
 
-		create_todo_list title: ""
 
 		expect(page).to have_content("error")
 		expect(TodoList.count).to eq(0)
